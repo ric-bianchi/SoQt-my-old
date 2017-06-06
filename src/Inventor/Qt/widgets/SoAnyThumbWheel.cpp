@@ -490,7 +490,7 @@ SoAnyThumbWheel::swapWord(
 
 void
 SoAnyThumbWheel::drawDisabledWheel(// private
-				   const int /*number*/,
+				   const int number,
 				   void * bitmap,
 				   Alignment alignment) const
 {
