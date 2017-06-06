@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is an updated version of the package SoQt, which can be found on Bitbucket:
+This is an updated version of the original SoQt package, which can be found on Bitbucket:
 
 https://bitbucket.org/Coin3D/soqt
 
