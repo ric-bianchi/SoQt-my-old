@@ -14,8 +14,6 @@ project( SoQt )
 # -- Coin3D
 find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
-#set( QT5_ROOT /cvmfs/sft.cern.ch/lcg/releases/LCG_88/qt5/5.6.0/x86_64-slc6-gcc62-opt )
-#set( ENV{CMAKE_PREFIX_PATH} ${QT5_ROOT} )
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
 
 # Generate UI files automatically:
