@@ -74,6 +74,8 @@
   \endcode
 */
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/viewers/SoQtExaminerViewer.h>
 #include <Inventor/SoPickedPoint.h>
 

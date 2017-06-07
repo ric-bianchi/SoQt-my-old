@@ -83,6 +83,8 @@
   \endcode
 */
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/nodes/SoCone.h>
 #include <Inventor/nodes/SoCube.h>
 #include <Inventor/nodes/SoTranslation.h>
