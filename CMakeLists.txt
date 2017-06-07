@@ -182,6 +182,8 @@ message("CMAKE_CURRENT_SOURCE_DIR: " ${CMAKE_CURRENT_SOURCE_DIR}) # this points 
 # adding the top folder storing the headers
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/src )
 
+# adding include directories
+target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
 
 # Component(s) in the package:
 add_library( SoQt SHARED ${SOQT_SOURCES} )
