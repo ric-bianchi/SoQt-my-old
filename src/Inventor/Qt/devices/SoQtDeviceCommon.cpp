@@ -44,6 +44,8 @@
 #include <config.h>
 #endif // HAVE_CONFIG_H
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/devices/SoQtDevice.h>
 #include <Inventor/Qt/devices/SoQtDeviceP.h>
 #include <Inventor/SbPList.h>

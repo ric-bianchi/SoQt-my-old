@@ -28,6 +28,8 @@
 #include <qevent.h>
 #include <qnamespace.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbDict.h>
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/events/SoKeyboardEvent.h>

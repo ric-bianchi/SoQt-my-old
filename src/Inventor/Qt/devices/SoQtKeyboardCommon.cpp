@@ -41,6 +41,8 @@
 #include <config.h>
 #endif // HAVE_CONFIG_H
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/devices/SoQtKeyboard.h>
 #include <Inventor/Qt/devices/SoGuiKeyboardP.h>
 #include <Inventor/events/SoKeyboardEvent.h>

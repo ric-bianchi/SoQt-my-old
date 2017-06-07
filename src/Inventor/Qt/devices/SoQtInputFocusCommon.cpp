@@ -38,6 +38,8 @@
 #include <config.h>
 #endif // HAVE_CONFIG_H
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/devices/SoQtInputFocus.h>
 #include <Inventor/Qt/devices/SoGuiInputFocusP.h>
 

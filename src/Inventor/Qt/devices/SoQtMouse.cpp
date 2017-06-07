@@ -27,6 +27,8 @@
 
 #include <qevent.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/events/SoMouseButtonEvent.h>
 #include <Inventor/events/SoLocation2Event.h>
