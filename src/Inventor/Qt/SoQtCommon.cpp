@@ -103,6 +103,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQt.h>
 #include <Inventor/Qt/SoGuiP.h>
 #include <Inventor/Qt/SoAny.h>

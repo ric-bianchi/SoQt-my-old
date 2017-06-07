@@ -44,6 +44,8 @@
 #include <string.h>
 #include <assert.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/elements/SoGLCacheContextElement.h>
 #include <Inventor/nodes/SoSeparator.h>

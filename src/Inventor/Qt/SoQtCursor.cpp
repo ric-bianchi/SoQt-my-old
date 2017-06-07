@@ -36,6 +36,8 @@
   SoQtComponent::setWidgetCursor() methods.
 */
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQtCursor.h>
 #include <Inventor/Qt/SoAny.h>
 #include <assert.h>

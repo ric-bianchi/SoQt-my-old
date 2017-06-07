@@ -89,6 +89,8 @@
 #include <GL/gl.h>
 #endif
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQtGLWidget.h>
 #include <Inventor/Qt/SoQtGLWidgetP.h>
 

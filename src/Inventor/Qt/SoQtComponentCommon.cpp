@@ -43,6 +43,7 @@
   i.e. SoQtComponent \e contains a QWidget *, it doesn't derive from
   or subclass it.
 */
+#include <Inventor/C/errors/debugerror.h>
 
 #include <Inventor/Qt/SoQt.h>
 #include <Inventor/Qt/SoQtComponent.h>

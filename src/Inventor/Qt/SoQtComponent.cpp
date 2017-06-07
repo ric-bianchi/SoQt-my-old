@@ -37,6 +37,7 @@
 #include <qcursor.h>
 #include <qevent.h>
 
+#include <Inventor/C/errors/debugerror.h>
 #include <Inventor/errors/SoDebugError.h>
 
 #include <Inventor/Qt/SoQtComponentP.h>

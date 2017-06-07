@@ -54,6 +54,7 @@
 // throughout the compilation of the SoQt library, not just for this
 // file. 20021021 mortene.
 
+#include <Inventor/C/errors/debugerror.h>
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
@@ -622,7 +623,7 @@ SoQtGLWidget::glFlushBuffer(void)
   // For reference, this is what Sam Magnusen from TrollTech says why
   // they need the ugly bitblt hack on the Mac:
   //
-  // «All widgets in Qt/Mac are really just an area that you are
+  // ï¿½All widgets in Qt/Mac are really just an area that you are
   // "allowed to paint on", and then when you do Qt/Mac will figure
   // out what that area is, and only paint on it. Most of this magic
   // is in QWidget/QPainter - however they can't handle the QGLWidget
@@ -632,7 +633,7 @@ SoQtGLWidget::glFlushBuffer(void)
   // not good enough if you had widgets overlapping the opengl widget,
   // if you are sure you don't, you can turn off the
   // QMAC_OPENGL_DOUBLEBUFFER ifdef (in qgl.h) and it will not use the
-  // technique, and I think you will get acceleration as well.»
+  // technique, and I think you will get acceleration as well.ï¿½
 
   // UPDATE: testing shows that this works in window mode, but that it
   // fails miserably in full screen mode (with lots of Core Graphics
