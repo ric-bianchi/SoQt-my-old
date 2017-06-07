@@ -23,6 +23,8 @@
 
 //#include <qmetaobject.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/nodes/SoNode.h>
 
 #include <soqtdefs.h>

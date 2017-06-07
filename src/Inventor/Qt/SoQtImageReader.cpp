@@ -25,6 +25,8 @@
 // fixes/changes here you should look into updating the Quarter
 // version as well.  pederb, 2009-02-04
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQtImageReader.h>
 #include <Inventor/SbImage.h>
 #include <qimage.h>

@@ -23,6 +23,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 // Pulls in __COIN_SOQT__ define used below.
 #include <Inventor/Qt/SoQtBasic.h>
 

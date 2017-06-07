@@ -21,6 +21,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <qmetaobject.h>
 
 #include <soqtdefs.h>

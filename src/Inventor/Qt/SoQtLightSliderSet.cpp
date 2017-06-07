@@ -20,8 +20,13 @@
  *  http://www.sim.no/  sales@sim.no  coin-support@coin3d.org
  *
 \**************************************************************************/
+
+#include <Inventor/C/errors/debugerror.h>
+
 //#include <qmetaobject.h>
+
 #include <soqtdefs.h>
+
 #include <Inventor/Qt/SoQtLightSliderSet.h>
 
 /*!

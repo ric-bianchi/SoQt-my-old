@@ -143,6 +143,8 @@
 
 // *************************************************************************
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQtRenderArea.h>
 
 #include <string.h> // strchr()
@@ -1826,7 +1828,7 @@ SoQtRenderArea::redraw(void)
     SoQtExaminerViewer::actualRedraw();
   
   
-    // Increase arrow angle with 1/1000 ° every frame.
+    // Increase arrow angle with 1/1000 ï¿½ every frame.
     arrowrotation->angle = arrowrotation->angle.getValue() + (0.001 / M_PI * 180);
     // Render overlay front scenegraph.
     glClear(GL_DEPTH_BUFFER_BIT);
