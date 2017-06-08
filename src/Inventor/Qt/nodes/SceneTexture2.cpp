@@ -35,6 +35,8 @@
 #include <assert.h>
 #include <string.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/sensors/SoFieldSensor.h>
 #include <Inventor/sensors/SoOneShotSensor.h>
