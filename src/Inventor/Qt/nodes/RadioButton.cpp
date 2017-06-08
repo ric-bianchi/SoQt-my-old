@@ -23,6 +23,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/actions/SoHandleEventAction.h>
 #include <Inventor/nodes/SoSeparator.h>
 #include <Inventor/nodes/SoCoordinate3.h>
