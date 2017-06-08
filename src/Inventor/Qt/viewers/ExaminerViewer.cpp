@@ -45,6 +45,8 @@
 #include <qstylefactory.h>
 #endif // HAVE_QSTYLEFACTORY_H
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/nodes/SoPerspectiveCamera.h>
 #include <Inventor/nodes/SoOrthographicCamera.h>
 #include <Inventor/fields/SoSFTime.h>

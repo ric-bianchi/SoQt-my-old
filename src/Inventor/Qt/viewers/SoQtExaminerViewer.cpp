@@ -183,6 +183,8 @@
 #include <assert.h>
 #include <math.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbTime.h>
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/nodes/SoOrthographicCamera.h>
@@ -976,7 +978,7 @@ SoGuiExaminerViewerP::drawAxisCross(void)
 
   const float NEARVAL = 0.1f;
   const float FARVAL = 10.0f;
-  const float dim = NEARVAL * float(tan(M_PI / 8.0)); // FOV is 45° (45/360 = 1/8)
+  const float dim = NEARVAL * float(tan(M_PI / 8.0)); // FOV is 45ï¿½ (45/360 = 1/8)
   glFrustum(-dim, dim, -dim, dim, NEARVAL, FARVAL);
 
 

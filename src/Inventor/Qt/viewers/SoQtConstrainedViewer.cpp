@@ -35,6 +35,8 @@
   through interaction mechanisms defined by the subclasses.
 */
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/viewers/SoQtConstrainedViewer.h>
 #include <Inventor/actions/SoRayPickAction.h>
 #include <Inventor/errors/SoDebugError.h>
