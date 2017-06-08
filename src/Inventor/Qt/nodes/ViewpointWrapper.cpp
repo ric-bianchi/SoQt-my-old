@@ -23,6 +23,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/nodes/SoGuiViewpointWrapper.h>
 #include <Inventor/SoPath.h>
 #include <Inventor/sensors/SoPathSensor.h>

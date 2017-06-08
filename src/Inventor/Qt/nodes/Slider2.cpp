@@ -29,6 +29,8 @@
 
 #include <math.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/actions/SoGLRenderAction.h>
 #include <Inventor/actions/SoHandleEventAction.h>

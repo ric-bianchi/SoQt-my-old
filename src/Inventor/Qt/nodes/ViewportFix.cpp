@@ -25,6 +25,8 @@
 
 #include <assert.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbViewportRegion.h>
 #include <Inventor/SbLinear.h>
 #include <Inventor/errors/SoDebugError.h>
