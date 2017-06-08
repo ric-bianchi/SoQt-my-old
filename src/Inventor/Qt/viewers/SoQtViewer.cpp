@@ -144,6 +144,8 @@
 #include <math.h>
 #include <float.h> // FLT_MAX
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbLinear.h>
 #include <Inventor/SoDB.h>
 #include <Inventor/SoLists.h>
@@ -415,7 +417,7 @@ SoQtViewerP::getCameraCoordinateSystem(SoCamera * cameraarg,
 // These functions do this:
 //
 //       * when going from orthocam -> perspectivecam: set the
-//       heightAngle field to its default value (45°), and move
+//       heightAngle field to its default value (45ï¿½), and move
 //       camera to a position where the scene/model would fill about
 //       the same screenspace as it did in the orthocam
 //
@@ -446,7 +448,7 @@ SoQtViewerP::convertOrtho2Perspective(const SoOrthographicCamera * in,
 
   out->focalDistance.setValue(focaldist);
   
-  // 45° is the default value of this field in SoPerspectiveCamera.
+  // 45ï¿½ is the default value of this field in SoPerspectiveCamera.
     out->heightAngle = (float)(M_PI / 4.0);
 
 #if SOQT_DEBUG && 0 // debug

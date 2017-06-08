@@ -25,6 +25,9 @@
 #define SOQT_QTNATIVEPOPUPMENU_H
 
 #include <QObject>
+
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/SoQtBasic.h>
 #include <Inventor/Qt/widgets/SoQtPopupMenu.h>
 

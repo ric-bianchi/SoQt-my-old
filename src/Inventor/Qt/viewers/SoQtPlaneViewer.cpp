@@ -99,6 +99,8 @@
 
 // *************************************************************************
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/viewers/SoQtPlaneViewer.h>
 
 #ifdef HAVE_CONFIG_H

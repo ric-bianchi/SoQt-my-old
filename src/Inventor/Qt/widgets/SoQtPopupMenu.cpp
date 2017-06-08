@@ -38,6 +38,8 @@
 
 #include <assert.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SoLists.h>
 #include <Inventor/errors/SoDebugError.h>
 
