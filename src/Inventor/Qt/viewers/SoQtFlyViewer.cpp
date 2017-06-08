@@ -59,6 +59,8 @@
     suddenly change.
 */
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <soqtdefs.h>
 #include <Inventor/Qt/viewers/SoQtFlyViewer.h>
 #include <Inventor/events/SoKeyboardEvent.h>

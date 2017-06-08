@@ -72,6 +72,8 @@
 
 #include <float.h>
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/Qt/viewers/SoQtFullViewer.h>
 #include <Inventor/Qt/viewers/SoQtFullViewerP.h>
 #include <Inventor/Qt/widgets/SoQtPopupMenu.h>
