@@ -23,6 +23,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbPList.h>
 #include <Inventor/SoSceneManager.h>
 #include <Inventor/fields/SoSFColor.h>

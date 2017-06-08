@@ -23,6 +23,8 @@
  *
 \**************************************************************************/
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/errors/SoDebugError.h>
 #include <Inventor/nodes/SoSeparator.h>
 #include <Inventor/nodes/SoTexture2.h>

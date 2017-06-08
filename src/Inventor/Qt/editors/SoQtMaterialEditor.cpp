@@ -27,6 +27,8 @@
 #include <config.h>
 #endif // HAVE_CONFIG_H
 
+#include <Inventor/C/errors/debugerror.h>
+
 #include <Inventor/SbPList.h>
 #include <Inventor/nodes/SoSeparator.h>
 #include <Inventor/nodes/SoMaterial.h>
