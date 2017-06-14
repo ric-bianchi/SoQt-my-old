@@ -50,19 +50,7 @@ set(SOQT_HEADERS
    ${SOQT_TOP_SOURCE_DIR}/SoQtSignalThread.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSet.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSetBase.h 
-   ${SOQT_TOP_SOURCE_DIR}/SoQtTransformSliderSet.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/6DOFEvents.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiDeviceP.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiInputFocusP.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiKeyboardP.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiMouseP.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtDevice.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtDeviceP.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtInputFocus.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtKeyboard.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtMouse.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/spwinput.h 
-   ${SOQT_TOP_SOURCE_DIR}/devices/spwinput_win32.h 
+   ${SOQT_TOP_SOURCE_DIR}/SoQtTransformSliderSet.h  
    ${SOQT_TOP_SOURCE_DIR}/editors/RadioGroupKit.h 
    ${SOQT_TOP_SOURCE_DIR}/editors/RGBCubeEditorKit.h 
    ${SOQT_TOP_SOURCE_DIR}/editors/SoQtColorEditor.h 
@@ -107,6 +95,21 @@ set(SOQT_HEADERS
    ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtThumbWheel.h 
 )
 
+set(SOQT_HEADERS_DEVICES
+   ${SOQT_TOP_SOURCE_DIR}/devices/6DOFEvents.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiDeviceP.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiInputFocusP.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiKeyboardP.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoGuiMouseP.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtDevice.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtDeviceP.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtInputFocus.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtKeyboard.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/SoQtMouse.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/spwinput.h 
+   ${SOQT_TOP_SOURCE_DIR}/devices/spwinput_win32.h
+)
+   
 set( SOQT_SOURCES
 	${SOQT_TOP_SOURCE_DIR}/SoAny.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQt.cpp 
@@ -196,3 +199,4 @@ target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
 message( "Files will be installed under the path: " ${CMAKE_INSTALL_PREFIX} ) 
 install( TARGETS SoQt DESTINATION lib )
 install( FILES ${SOQT_HEADERS} DESTINATION include )
+install( FILES ${SOQT_HEADERS_DEVICES} DESTINATION include/Inventor/Qt/devices )
