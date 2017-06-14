@@ -51,10 +51,7 @@ set(SOQT_HEADERS
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSet.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSetBase.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtTransformSliderSet.h  
-   ${SOQT_TOP_SOURCE_DIR}/editors/RadioGroupKit.h 
-   ${SOQT_TOP_SOURCE_DIR}/editors/RGBCubeEditorKit.h 
-   ${SOQT_TOP_SOURCE_DIR}/editors/SoQtColorEditor.h 
-   ${SOQT_TOP_SOURCE_DIR}/editors/SoQtMaterialEditor.h 
+    
    ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiEngines.h 
    ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiFormat.h 
    ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiRadioGroup.h 
@@ -109,7 +106,14 @@ set(SOQT_HEADERS_DEVICES
    ${SOQT_TOP_SOURCE_DIR}/devices/spwinput.h 
    ${SOQT_TOP_SOURCE_DIR}/devices/spwinput_win32.h
 )
-   
+
+set(SOQT_HEADERS_EDITORS
+   ${SOQT_TOP_SOURCE_DIR}/editors/RadioGroupKit.h 
+   ${SOQT_TOP_SOURCE_DIR}/editors/RGBCubeEditorKit.h 
+   ${SOQT_TOP_SOURCE_DIR}/editors/SoQtColorEditor.h 
+   ${SOQT_TOP_SOURCE_DIR}/editors/SoQtMaterialEditor.h
+)
+
 set( SOQT_SOURCES
 	${SOQT_TOP_SOURCE_DIR}/SoAny.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQt.cpp 
@@ -200,3 +204,4 @@ message( "Files will be installed under the path: " ${CMAKE_INSTALL_PREFIX} )
 install( TARGETS SoQt DESTINATION lib )
 install( FILES ${SOQT_HEADERS} DESTINATION include )
 install( FILES ${SOQT_HEADERS_DEVICES} DESTINATION include/Inventor/Qt/devices )
+install( FILES ${SOQT_HEADERS_EDITORS} DESTINATION include/Inventor/Qt/editors )
