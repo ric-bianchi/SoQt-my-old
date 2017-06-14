@@ -26,6 +26,8 @@ set( CMAKE_AUTORCC TRUE )
 
 set( SOQT_TOP_SOURCE_DIR src/Inventor/Qt )
 
+# --- HEADERS
+
 set(SOQT_HEADERS
    ${SOQT_TOP_SOURCE_DIR}/SoAny.h 
    ${SOQT_TOP_SOURCE_DIR}/SoGuiComponentP.h 
@@ -50,46 +52,7 @@ set(SOQT_HEADERS
    ${SOQT_TOP_SOURCE_DIR}/SoQtSignalThread.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSet.h 
    ${SOQT_TOP_SOURCE_DIR}/SoQtSliderSetBase.h 
-   ${SOQT_TOP_SOURCE_DIR}/SoQtTransformSliderSet.h  
-    
-   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiEngines.h 
-   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiFormat.h 
-   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiRadioGroup.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiClickCounter.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiColorEditor.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiFrame.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiImage.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiLabel.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiMaterialEditor.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiNodes.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiPane.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiPosition.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiRadioButton.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSceneTexture2.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSlider1.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSlider2.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiToggleButton.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiTranslation.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiViewpointWrapper.h 
-   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiViewportFix.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiExaminerViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiFullViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiPlaneViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtConstrainedViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtExaminerViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtExaminerViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFlyViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFullViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFullViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtPlaneViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtPlaneViewerP.h 
-   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtViewer.h 
-   ${SOQT_TOP_SOURCE_DIR}/widgets/QtNativePopupMenu.h 
-   ${SOQT_TOP_SOURCE_DIR}/widgets/SoAnyThumbWheel.h 
-   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtGLArea.h 
-   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtPopupMenu.h 
-   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtThumbWheel.h 
+   ${SOQT_TOP_SOURCE_DIR}/SoQtTransformSliderSet.h   
 )
 
 set(SOQT_HEADERS_DEVICES
@@ -114,6 +77,60 @@ set(SOQT_HEADERS_EDITORS
    ${SOQT_TOP_SOURCE_DIR}/editors/SoQtMaterialEditor.h
 )
 
+set(SOQT_HEADERS_ENGINES
+   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiEngines.h 
+   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiFormat.h 
+   ${SOQT_TOP_SOURCE_DIR}/engines/SoGuiRadioGroup.h 
+)
+
+set(SOQT_HEADERS_NODES
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiClickCounter.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiColorEditor.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiFrame.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiImage.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiLabel.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiMaterialEditor.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiNodes.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiPane.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiPosition.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiRadioButton.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSceneTexture2.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSlider1.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiSlider2.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiToggleButton.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiTranslation.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiViewpointWrapper.h 
+   ${SOQT_TOP_SOURCE_DIR}/nodes/SoGuiViewportFix.h 
+)
+
+set(SOQT_HEADERS_VIEWERS
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiExaminerViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiFullViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiPlaneViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoGuiViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtConstrainedViewer.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtExaminerViewer.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtExaminerViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFlyViewer.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFullViewer.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtFullViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtPlaneViewer.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtPlaneViewerP.h 
+   ${SOQT_TOP_SOURCE_DIR}/viewers/SoQtViewer.h
+)  
+
+set(SOQT_HEADERS_WIDGETS
+   ${SOQT_TOP_SOURCE_DIR}/widgets/QtNativePopupMenu.h 
+   ${SOQT_TOP_SOURCE_DIR}/widgets/SoAnyThumbWheel.h 
+   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtGLArea.h 
+   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtPopupMenu.h 
+   ${SOQT_TOP_SOURCE_DIR}/widgets/SoQtThumbWheel.h
+)
+
+
+
+# --- SOURCES
+
 set( SOQT_SOURCES
 	${SOQT_TOP_SOURCE_DIR}/SoAny.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQt.cpp 
@@ -124,7 +141,7 @@ set( SOQT_SOURCES
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidget.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidgetCommon.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtImageReader.cpp 
-    ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
+        ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtObject.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtRenderArea.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtSignalThread.cpp 
@@ -198,10 +215,23 @@ target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui G
 # adding include directories
 target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
 
+### INSTALLATION
+
 # default installation path is under /usr/local, 
 # but you can modify it at setup time with, e.g.: 'cmake -DCMAKE_INSTALL_PREFIX=$PWD/local ../SoQt'
 message( "Files will be installed under the path: " ${CMAKE_INSTALL_PREFIX} ) 
+
+# Library installation
 install( TARGETS SoQt DESTINATION lib )
-install( FILES ${SOQT_HEADERS} DESTINATION include )
+
+# Headers installation
+install( FILES ${SOQT_HEADERS} DESTINATION include/Inventor/Qt )
 install( FILES ${SOQT_HEADERS_DEVICES} DESTINATION include/Inventor/Qt/devices )
 install( FILES ${SOQT_HEADERS_EDITORS} DESTINATION include/Inventor/Qt/editors )
+install( FILES ${SOQT_HEADERS_ENGINES} DESTINATION include/Inventor/Qt/engines )
+install( FILES ${SOQT_HEADERS_NODES} DESTINATION include/Inventor/Qt/nodes )
+install( FILES ${SOQT_HEADERS_VIEWERS} DESTINATION include/Inventor/Qt/viewers )
+install( FILES ${SOQT_HEADERS_WIDGETS} DESTINATION include/Inventor/Qt/widgets )
+
+
+
