@@ -164,11 +164,11 @@ SOURCES += SoAny.cpp \
 
 
 INSTALLS += target
-target.path=./local/lib
+target.path=../../local/lib
 
 
 
-INSTALL_PREFIX = ./local/include/Inventor/Qt
+INSTALL_PREFIX = ../../local/include/Inventor/Qt
 INSTALL_HEADERS =  \
            SoAny.h \
            SoQt.h \
