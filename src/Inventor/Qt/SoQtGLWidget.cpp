@@ -1286,13 +1286,7 @@ SoQtGLWidgetP::getOverlayContext(void)
   return NULL;
 }
 
-#if HAVE_GLX
-// There is something in this header file that fools the g++ 2.95.4
-// compiler to run into problems with some of the code in
-// SoQtGLWidgetP::eventFilter() (it gives a completely non-sensical
-// error message), so we just include it at the bottom like this.
 #include <GL/glx.h> // For glXIsDirect().
-#endif // HAVE_GLX
 
 // Return a flag indicating whether or not OpenGL rendering is
 // happening directly from the CPU(s) to the GPU(s), ie on a local

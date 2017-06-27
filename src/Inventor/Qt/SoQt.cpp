@@ -373,7 +373,7 @@ SoQtP::soqt_instance(void)
 }
 
 int
-SoQtP::X11Errorhandler(void * /*d*/, void * /*ee*/)
+SoQtP::X11Errorhandler(void * d, void * ee)
 {
 #if defined(Q_WS_X11)
 
