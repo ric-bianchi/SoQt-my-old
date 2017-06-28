@@ -141,7 +141,7 @@ set( SOQT_SOURCES
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidget.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidgetCommon.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtImageReader.cpp 
-        ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
+    ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtObject.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtRenderArea.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtSignalThread.cpp 
@@ -207,9 +207,16 @@ message("CMAKE_CURRENT_SOURCE_DIR: " ${CMAKE_CURRENT_SOURCE_DIR}) # this points 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/src )
 
 # Component(s) in the package:
-add_library( SoQt SHARED ${SOQT_SOURCES} )
+add_library( SoQt SHARED ${SOQT_SOURCES} ${SOQT_HEADERS} ${SOQT_HEADERS_DEVICES} ${SOQT_HEADERS_EDITORS} ${SOQT_HEADERS_ENGINES} ${SOQT_HEADERS_NODES} ${SOQT_HEADERS_VIEWERS}
+${SOQT_HEADERS_WIDGETS})
 
-target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 ) # adding "-DSOQT_INTERNAL -DSOQT_DEBUG=1" compilation definitions to the compilation command of the SoQt library
+#qt5_wrap_cpp(${SOQT_HEADERS_VIEWERS})
+
+target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 QT_SHARED NDEBUG ) # adding "-DSOQT_INTERNAL -DSOQT_DEBUG=1 ..." compilation definitions to the compilation command of the SoQt library
+
+SET(GCC_SOQT_COMPILE_FLAGS "-fno-builtin")
+add_definitions(${GCC_SOQT_COMPILE_FLAGS})
+
 target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui GL )
 
 # adding include directories
