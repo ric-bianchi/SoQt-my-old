@@ -12,6 +12,7 @@ project( SoQt )
 
 # External dependencies:
 # -- Coin3D
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
