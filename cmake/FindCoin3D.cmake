@@ -78,14 +78,25 @@ else ()
     #find_library(COIN3D_LIBRARIES Coin 
     
     # Ric's new, takes Coin3D from local custom build
+    #find_path(COIN3D_INCLUDE_DIRS Inventor/So.h
+    #${CMAKE_CURRENT_BINARY_DIR}/${ATLAS_PLATFORM}/include
+    #NO_DEFAULT_PATH
+    #)
+    #find_library(COIN3D_LIBRARIES Coin 
+    #${CMAKE_CURRENT_BINARY_DIR}/${ATLAS_PLATFORM}/lib64
+    #NO_DEFAULT_PATH
+    #)
+    
+    # Ric's new, takes Coin3D from local custom build
     find_path(COIN3D_INCLUDE_DIRS Inventor/So.h
-    ${CMAKE_CURRENT_BINARY_DIR}/${ATLAS_PLATFORM}/include
+    /home_slc6/rbianchi/code_local/SoQt_rel21_Qt5_new_Coin3D_Externals/build_newCoin_patched_v3/x86_64-slc6-gcc62-opt/include
     NO_DEFAULT_PATH
     )
     find_library(COIN3D_LIBRARIES Coin 
-    ${CMAKE_CURRENT_BINARY_DIR}/${ATLAS_PLATFORM}/lib64
+    /home_slc6/rbianchi/code_local/SoQt_rel21_Qt5_new_Coin3D_Externals/build_newCoin_patched_v3/x86_64-slc6-gcc62-opt/lib64
     NO_DEFAULT_PATH
     )
+    
 
   endif()
 
