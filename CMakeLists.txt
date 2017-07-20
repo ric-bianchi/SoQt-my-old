@@ -16,6 +16,12 @@ find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
 
+message("SoQt - Coin3D_FOUND: ${Coin3D_FOUND}")
+message("SoQt - COIN3D_ROOT: ${COIN3D_ROOT}")
+message("SoQt - Coin3D_INCLUDE_DIRS: ${Coin3D_INCLUDE_DIRS}")
+message("SoQt - Coin3D_LIBRARIES: ${Coin3D_LIBRARIES}")
+
+
 # Generate UI files automatically:
 set( CMAKE_AUTOUIC TRUE )
 # Generate MOC files automatically:
