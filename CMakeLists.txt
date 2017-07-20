@@ -147,7 +147,7 @@ set( SOQT_SOURCES
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidget.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtGLWidgetCommon.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtImageReader.cpp 
-    ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
+        ${SOQT_TOP_SOURCE_DIR}/SoQtLightSliderSet.cpp 
    	${SOQT_TOP_SOURCE_DIR}/SoQtObject.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtRenderArea.cpp 
 	${SOQT_TOP_SOURCE_DIR}/SoQtSignalThread.cpp 
