@@ -12,7 +12,7 @@ project( SoQt )
 
 # External dependencies:
 # -- CoinAtlas (ATLAS flavour of Coin3D)
-find_package( CoinAtlas REQUIRED ) # this will take /usr/lib if found
+#find_package( CoinAtlas REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
 
