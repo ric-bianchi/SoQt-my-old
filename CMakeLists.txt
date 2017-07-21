@@ -11,15 +11,15 @@ project( SoQt )
 
 
 # External dependencies:
-# -- Coin3D
-find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
+# -- CoinAtlas (ATLAS flavour of Coin3D)
+find_package( CoinAtlas REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
 
-message("CMake SoQt - Coin3D_FOUND: ${Coin3D_FOUND}")
-message("CMake SoQt - COIN3D_ROOT: ${COIN3D_ROOT}")
-message("CMake SoQt - Coin3D_INCLUDE_DIRS: ${Coin3D_INCLUDE_DIRS}")
-message("CMake SoQt - Coin3D_LIBRARIES: ${Coin3D_LIBRARIES}")
+message("CMake SoQt - COINATLAS_FOUND: ${COINATLAS_FOUND}")
+message("CMake SoQt - COINATLAS_ROOT: ${COINATLAS_ROOT}")
+message("CMake SoQt - COINATLAS_INCLUDE_DIRS: ${COINATLAS_INCLUDE_DIRS}")
+message("CMake SoQt - COINATLAS_LIBRARIES: ${COINATLAS_LIBRARIES}")
 
 
 # Generate UI files automatically:
@@ -223,10 +223,10 @@ target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 QT_SHARED ND
 SET(GCC_SOQT_COMPILE_FLAGS "-fno-builtin")
 add_definitions(${GCC_SOQT_COMPILE_FLAGS})
 
-target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui GL )
+target_link_libraries( SoQt ${COINATLAS_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui GL )
 
 # adding include directories
-target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
+target_include_directories( SoQt PUBLIC ${COINATLAS_INCLUDE_DIRS} )
 
 ### INSTALLATION
 
