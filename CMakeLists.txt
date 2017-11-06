@@ -34,6 +34,41 @@ set( CMAKE_AUTORCC TRUE )
 
 set( SOQT_TOP_SOURCE_DIR src/Inventor/Qt )
 
+
+# --- get macOS version
+#
+# MAC_OSX_VERSION defines the Mac OSX Version, e.g.
+#   MAC_OSX_VERSION = 106
+# specifies OSX Snow Leopard (10.6)
+#
+if (APPLE)
+	
+	string(REGEX REPLACE "^([0-9]+)\\.([0-9]+).*$" "\\1" DARWIN_MAJOR_VERSION "${CMAKE_SYSTEM_VERSION}")
+	string(REGEX REPLACE "^([0-9]+)\\.([0-9]+).*$" "\\2" DARWIN_MINOR_VERSION "${CMAKE_SYSTEM_VERSION}")
+
+	# NOTE MacOSX provides different system versions than CMake is parsing.
+	#      The following table lists the most recent OSX versions
+	#
+	# Darwin versions:
+	#     9.x.x = Mac OSX Leopard (10.5)
+	#    10.x.x = Mac OSX Snow Leopard (10.6)
+	#    11.x.x = Mac OSX Lion (10.7)
+	#    12.x.x = Mac OSX Mountain Lion (10.8)
+	if (${CMAKE_SYSTEM_VERSION} LESS 10)
+		set (MAC_OSX_VERSION 105)
+	elseif (${CMAKE_SYSTEM_VERSION} GREATER 10 AND ${CMAKE_SYSTEM_VERSION} LESS 11)
+		set (MAC_OSX_VERSION 106)
+	elseif (${CMAKE_SYSTEM_VERSION} GREATER 11 AND ${CMAKE_SYSTEM_VERSION} LESS 12)
+		set (MAC_OSX_VERSION 107)
+	elseif (${CMAKE_SYSTEM_VERSION} GREATER 12 OR ${CMAKE_SYSTEM_VERSION} EQUAL 12)
+		set (MAC_OSX_VERSION 108)
+	else ()
+		set (MAC_OSX_VERSION 0)
+	endif ()
+endif ()
+message(STATUS "Apple macOS Version: ${MAC_OSX_VERSION}")
+
+
 # --- HEADERS
 
 set(SOQT_HEADERS
@@ -225,6 +260,8 @@ target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 QT_SHARED ND
 SET(GCC_SOQT_COMPILE_FLAGS "-fno-builtin")
 add_definitions(${GCC_SOQT_COMPILE_FLAGS})
 
+
+		
 target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui ${OPENGL_gl_LIBRARY} )
 
 # adding include directories
