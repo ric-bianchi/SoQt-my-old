@@ -15,6 +15,8 @@ project( SoQt )
 find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
+# -- OpenGL
+find_package(OpenGL REQUIRED)
 
 # Generate UI files automatically:
 set( CMAKE_AUTOUIC TRUE )
@@ -186,7 +188,7 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/src )
 add_library( SoQt SHARED ${SOQT_SOURCES} )
 
 target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 ) # adding "-DSOQT_INTERNAL -DSOQT_DEBUG=1" compilation definitions to the compilation command of the SoQt library
-target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui GL )
+target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui ${OPENGL_gl_LIBRARY} )
 
 # adding include directories
 target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
