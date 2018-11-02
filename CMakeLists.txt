@@ -15,8 +15,11 @@ project( SoQt )
 find_package( Coin3D REQUIRED ) # this will take /usr/lib if found
 # -- Qt5 
 find_package( Qt5 COMPONENTS Core OpenGL Gui Widgets REQUIRED )
-# -- OpenGL
-find_package(OpenGL REQUIRED)
+
+if(APPLE)
+	# -- OpenGL
+	find_package(OpenGL REQUIRED)
+endif()
 
 message("CMake SoQt - Coin3D_FOUND: ${Coin3D_FOUND}")
 message("CMake SoQt - COIN3D_ROOT: ${COIN3D_ROOT}")
@@ -225,7 +228,11 @@ target_compile_definitions( SoQt PRIVATE SOQT_INTERNAL SOQT_DEBUG=1 QT_SHARED ND
 SET(GCC_SOQT_COMPILE_FLAGS "-fno-builtin")
 add_definitions(${GCC_SOQT_COMPILE_FLAGS})
 
-target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui ${OPENGL_gl_LIBRARY} )
+if(APPLE)
+	target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui ${OPENGL_gl_LIBRARY} )
+else()
+	target_link_libraries( SoQt ${COIN3D_LIBRARIES} Qt5::Core Qt5::OpenGL Qt5::Gui GL )
+endif()
 
 # adding include directories
 target_include_directories( SoQt PUBLIC ${COIN3D_INCLUDE_DIRS} )
